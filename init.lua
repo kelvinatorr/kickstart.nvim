@@ -199,7 +199,7 @@ vim.o.hlsearch = false
 vim.wo.number = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = 'v'
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
@@ -230,7 +230,11 @@ vim.o.completeopt = 'menuone,noselect'
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
 
+vim.o.rnu = true
+vim.o.list = true
+vim.o.listchars = "trail:~,tab:>-,nbsp:␣"
 -- [[ Basic Keymaps ]]
+vim.keymap.set('n', '<C-s>', ':wall<CR>')
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
