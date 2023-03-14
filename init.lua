@@ -235,6 +235,8 @@ vim.o.list = true
 vim.o.listchars = "trail:~,tab:>-,nbsp:␣"
 -- [[ Basic Keymaps ]]
 vim.keymap.set('n', '<C-s>', ':wall<CR>')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
