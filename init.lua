@@ -177,6 +177,7 @@ require('lazy').setup({
   --       Uncomment any of the lines below to enable them.
   -- require 'kickstart.plugins.autoformat',
   -- require 'kickstart.plugins.debug',
+  'habamax/vim-godot',
 
   -- NOTE: The import below automatically adds your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
@@ -233,6 +234,8 @@ vim.o.termguicolors = true
 vim.o.rnu = true
 vim.o.list = true
 vim.o.listchars = "trail:~,tab:>-,nbsp:␣"
+-- Blink the cursor
+vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 -- [[ Basic Keymaps ]]
 vim.keymap.set('n', '<C-s>', ':wall<CR>')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
