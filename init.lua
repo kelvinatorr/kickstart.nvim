@@ -240,6 +240,8 @@ vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50,a:blinkwait700-b
 vim.keymap.set('n', '<C-s>', ':wall<CR>')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzz')
+vim.keymap.set('n', 'N', 'Nzz')
 
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
@@ -292,6 +294,10 @@ vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc
 vim.keymap.set('n', '<leader>sw', require('telescope.builtin').grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc = '[S]earch by [G]rep' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
+
+-- Habamax/vim-godot keymaps
+vim.keymap.set('n', '<leader><F5>', ':GodotRun<CR>')
+vim.keymap.set('n', '<leader><F6>', ':GodotRunCurrent<CR>')
 
 -- [[ Configure Treesitter ]]
 -- See `:help nvim-treesitter`
@@ -505,3 +511,10 @@ cmp.setup {
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 require'lspconfig'.gdscript.setup{}
+
+require('onedark').setup {
+  style = 'warm',
+  toggle_style_key = '<leader>ts',
+  toggle_style_list = {'warmer', 'dark', 'darker', 'cool', 'deep', 'light', 'warm'},
+}
+require('onedark').load()
